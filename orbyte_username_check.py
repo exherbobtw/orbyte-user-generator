@@ -1,23 +1,4 @@
 #!/usr/bin/env python3
-"""
-Orbyte rare-username availability scanner (READ-ONLY).
-
-Runs forever until you hit Ctrl+C, working through short word-like names
-(real words + pronounceable ones like "helfo") instead of random gibberish.
-It creates no accounts and logs in as nobody.
-
-    GET https://api.orbyte.fun/api/usernames/check?username=<name>
-
-Available names are printed to stdout (one per line) and appended to --out.
-
-Usage:
-    python3 orbyte_username_check.py                          # runs forever
-    python3 orbyte_username_check.py --mode word --length 4   # only real 4-letter words
-    python3 orbyte_username_check.py --length 4,5 --out open.txt 2>/dev/null
-    python3 orbyte_username_check.py --count 500              # stop after 500 checks
-
-Stop with Ctrl+C. Register what you like at https://orbyte.fun/ -> "Create an account".
-"""
 
 import argparse
 import json
